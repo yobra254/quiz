@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 //import 'package:flutter/src/widgets/placeholder.dart';
 
 class first extends StatelessWidget {
-  const first({super.key});
+  const first(this.startQuiz, {super.key});
+
+  final void Function() startQuiz;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,9 @@ class first extends StatelessWidget {
             height: 20,
           ),
           OutlinedButton.icon(
-            onPressed: () {},
+            onPressed: () {
+              startQuiz();
+            },
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white,
             ),
