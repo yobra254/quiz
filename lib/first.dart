@@ -11,9 +11,11 @@ class first extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+          //Opacity(opacity: opacity)
           Image.asset(
             'assets/images/quiz-logo.png',
             width: 200,
+            color: const Color.fromARGB(150, 255, 255, 255),
           ),
           const SizedBox(
             height: 20,
@@ -28,12 +30,13 @@ class first extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          OutlinedButton(
+          OutlinedButton.icon(
             onPressed: () {},
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white,
             ),
-            child: const Text('Start Quiz'),
+            icon: const Icon(Icons.arrow_circle_right),
+            label: const Text('Start Quiz'),
           )
         ],
       ),
