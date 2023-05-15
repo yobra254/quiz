@@ -26,10 +26,10 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           const SizedBox(
             height: 30,
           ),
-          AnswerButton(answerText: currentQuestion.answers[0], onTap: () {}),
-          AnswerButton(answerText: currentQuestion.answers[1], onTap: () {}),
-          AnswerButton(answerText: currentQuestion.answers[2], onTap: () {}),
-          AnswerButton(answerText: currentQuestion.answers[3], onTap: () {}),
+          //Considering children only allows a list of widgets we put 3 dots to pull the values in a list/iterable and pull them from the list and iterable and place them as individual Comma separeted values
+          ...currentQuestion.answers.map((answer) {
+            return AnswerButton(answerText: answer, onTap: () {});
+          })
         ],
       ),
     );
